@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>homework</title>
+    <style>
+    body{
+        background: #000;
+    }
+    svg{
+        width:600px;
+        display: block;
+        position: absolute;
+    }
+    .ball{
+        width: 17px;
+        height: 17px;
+        background-color: blueviolet;
+        border-radius: 50%;
+        offset-path: path('M 300,300 A 100,100 0 1 1 300,299 Z');
+        offset-distance: 0%;
+        animation: red-ball 6s linear infinite;
+    }
+    @keyframes red-ball {
+        100%{
+            offset-distance: 100%;
+        }
+    }
+    .circle{
+        width:600px;
+        margin: 0 auto;
+    }
+    </style>
+</head>
 
+  <body>
+    <div class="circle">
+        <svg width="600px" height="600px" version="1.1">
+            <path fill="transparent" stroke="#00d2ff" stroke-width="6" d="M 300,300 A 100,100 0 1 1 300,299 Z" class="path"></path>
+        </svg>
+        <div class="ball"></div>
+  </body>
+</html>
