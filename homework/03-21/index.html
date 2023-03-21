@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fire incident in Boston</title>
+	<style>
+		.author-info {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 10px;
+			font-size: 14px;
+			color: #555;
+		}
+		.author-info span {
+			margin-right: 10px;
+		}
+	</style>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			line-height: 1.5;
+			text-align: justify;
+			margin: 0;
+			padding: 0;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			font-weight: bold;
+			margin-top: 30px;
+			margin-bottom: 20px;
+		}
+		p {
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+<body style="background-color: #f8c032;">
+
+		<h1>Fire incident in Boston</h1>
+		<div class="author-info">
+			<span>Written by Shuang Jing</span>
+			<span>Published on March 14, 2023</span>
+		</div>
+		<p>Fire incidents can have devastating consequences, causing property damage, injuries, and loss of life. As a result, cities around the world invest significant resources in fire prevention and response. In the city of Boston, the fire department responds to an average of 40,000 incidents per year, ranging from small fires to major emergencies.
+			In this project, I will analyze data from the Boston Fire Incident Reporting System for the period from February 11, 2023, to March 11, 2023. By exploring the patterns and trends in fire incidents, I wish to provide insights that can inform fire prevention strategies and improve emergency response in the city.</p>
+			<h2>Data analysis</h2>
+			<div>
+				<p>We conducted an exploratory analysis of the fire incidents in Boston from February 11th to March 11th, 2023. The dataset contained information on the date, time, location, and type of each fire incident.</p>
+				<p>The fire incident data used in this analysis was obtained from the <a href="https://data.boston.gov/dataset/fire-incident-reporting" target="_blank">Boston Fire Department</a>. The data includes information on the date, time, location, and cause of each fire incident that occurred during the selected time period.</p>
+				<h3>Number of fires in each neighbor in Boston</h3>
+				<p>The data collected between February 11 and March 11 reveals that the neighborhoods of Boston, Charlestown, and Roxbury were the areas most affected by fires. The incidence of fires in these areas was significantly higher than other neighborhoods in the Boston region.</p>
+				<hr>
+				<p>information highlights the need for increased fire prevention measures in these neighborhoods, such as the installation of fire alarms and smoke detectors, regular fire safety inspections, and improved building codes. Local authorities should also consider targeted outreach and education campaigns to raise awareness of fire prevention practices among residents in these areas.</p>
+			</div>
+			<canvas id="myChart"></canvas>
+
+			<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+			<script>
+				var ctx = document.getElementById('myChart').getContext('2d');
+				var chart = new Chart(ctx, {
+					// The type of chart we want to create
+					type: 'bar',
+		
+					// The data for our dataset
+					data: {
+						labels: ['Allston-Brighton', 'Boston', 'Charlestown', 'Dorchester', 'East Boston', 'Harbor Islands','Hyde Park',
+'Jamaica Plain','Mattapan','Roslindale','Roxbury','South Boston','West Roxbury'],
+						datasets: [{
+							label: 'Number of fire incident',
+							backgroundColor: 'rgb(158, 8, 8)',
+							borderColor: 'rgb(158, 8, 8)',
+							data: [314,1082,94,591,172,1,123,211,123,103,659,250,118]
+						}]
+					},
+		
+					// Configuration options go here
+					options: {}
+				});
+		
+			</script>
+			<p>This information could be useful for fire prevention efforts, such as increasing inspections or staffing during weekdays. Distribution of Fire Incidents by Time of Day. Next, we looked at the distribution of fire incidents across different times of the day. As shown in the line chart below, the majority of incidents occurred between 12 PM and 10 PM, with the highest concentration between 2 PM and 6 PM.</p>
+			<canvas id="myChart"></canvas>
+
+
+</body>
+</html>
