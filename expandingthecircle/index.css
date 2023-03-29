@@ -81,7 +81,7 @@ p.author-info{
 .quote-sec{
   position: relative;
   top:-500px;
-  padding: 0;
+  padding-bottom: 10px;
 }
 
 p.speech-bubble-quote {
@@ -222,6 +222,7 @@ p.graph {
   line-height: 2; /* 行高 */
   color: #333; /* 文字颜色 */
 }
+
 
 .audio-controls {
     display: flex;
