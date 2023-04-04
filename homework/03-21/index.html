@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="style.css">
-	<title>Fire incident in Boston</title>
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+	<style>
+	  .line {
+		fill: none;
+		stroke: rgb(52, 103, 145);
+		stroke-width: 2px;
+	  }
+	</style>
+	<section>
+	<title >Fire incident in Boston</title>
+    </section>
 	<style>
 		.author-info {
 			display: flex;
@@ -34,10 +43,11 @@
 			margin-bottom: 20px;
 		}
 	</style>
+	
 </head>
-<body style="background-color: #f8c032;">
+<body style="background-color: #fbe19ea2; margin: 150px;">
 
-		<h1>Fire incident in Boston</h1>
+		<h1 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif;">Fire incident in Boston</h1>
 		<div class="author-info">
 			<span>Written by Shuang Jing</span>
 			<span>Published on March 14, 2023</span>
@@ -50,7 +60,7 @@
 				<p>The fire incident data used in this analysis was obtained from the <a href="https://data.boston.gov/dataset/fire-incident-reporting" target="_blank">Boston Fire Department</a>. The data includes information on the date, time, location, and cause of each fire incident that occurred during the selected time period.</p>
 				<h3>Number of fires in each neighbor in Boston</h3>
 				<p>The data collected between February 11 and March 11 reveals that the neighborhoods of Boston, Charlestown, and Roxbury were the areas most affected by fires. The incidence of fires in these areas was significantly higher than other neighborhoods in the Boston region.</p>
-				<r>
+				<hr>
 				<p>information highlights the need for increased fire prevention measures in these neighborhoods, such as the installation of fire alarms and smoke detectors, regular fire safety inspections, and improved building codes. Local authorities should also consider targeted outreach and education campaigns to raise awareness of fire prevention practices among residents in these areas.</p>
 			</div>
 			<canvas id="myChart"></canvas>
@@ -82,6 +92,53 @@
 			<p>This information could be useful for fire prevention efforts, such as increasing inspections or staffing during weekdays. Distribution of Fire Incidents by Time of Day. Next, we looked at the distribution of fire incidents across different times of the day. As shown in the line chart below, the majority of incidents occurred between 12 PM and 10 PM, with the highest concentration between 2 PM and 6 PM.</p>
 			<canvas id="myChart"></canvas>
 
+			<div id="chart-container"></div>
+
+			
+  <!-- <script>
+    d3.csv('date-and-number.csv').then(function(data) {
+      var parser = d3.timeParse('%m-%d-%y');
+      data.forEach(function(d) {
+        d.date = parser(d.date);
+        d.count = +d.count;
+      });
+
+      var container = d3.select('#chart-container');
+      var margin = { top: 20, right: 20, bottom: 30, left: 50 };
+      var width = container.node().getBoundingClientRect().width - margin.left - margin.right;
+      var height = 400 - margin.top - margin.bottom;
+
+      var svg = container.append('svg')
+          .attr('width', width + margin.left + margin.right)
+          .attr('height', height + margin.top + margin.bottom)
+        .append('g')
+          .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+
+      var x = d3.scaleTime()
+          .domain(d3.extent(data, function(d) { return d.date; }))
+          .range([0, width]);
+
+      var y = d3.scaleLinear()
+          .domain([0, d3.max(data, function(d) { return d.count; })])
+          .range([height, 0]);
+
+      var line = d3.line()
+          .x(function(d) { return x(d.date); })
+          .y(function(d) { return y(d.count); });
+
+      svg.append('path')
+          .datum(data)
+          .attr('class', 'line')
+          .attr('d', line);
+
+      svg.append('g')
+          .attr('transform', 'translate(0,' + height + ')')
+          .call(d3.axisBottom(x));
+
+      svg.append('g')
+          .call(d3.axisLeft(y));
+    });
+  </script> -->
 
 </body>
 </html>
