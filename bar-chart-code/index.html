@@ -1,6 +1,29 @@
-<!-- head part: -->
+<canvas id="myChart"></canvas>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<!-- body part: -->
-<canvas id="myChart"></canvas>
-<script src="file.js"></script>
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'bar',
+
+            // The data for our dataset
+            data: {
+                labels: ['Mediation', 'Comparison Group'],
+                datasets: [{
+                    label: 'percentage',
+                    backgroundColor: ['rgb(120, 161, 230)', 'rgb(62, 101, 168)'],
+                    data: [19,28]
+                }]
+            },
+
+            // Configuration options go here
+            options: {
+                barPercentage: 0.5,
+        categoryPercentage: 0.8
+            }
+
+        });
+
+    </script>
+
