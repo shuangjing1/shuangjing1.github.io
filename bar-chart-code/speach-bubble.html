@@ -1,0 +1,35 @@
+
+<!-- html part -->
+<div class="speech-bubble">
+                        <audio controls src="Susan_clip1.mp3" style="width:100%"></audio>
+                        <p class="speech-bubble-quote">&ldquo; If you think about the way our criminal legal system currently works, there is little to no room within the structure of a court case for the victims.&rdquo;</p>
+                        <p class="quotsigner">Susan Maze-Rothstein, Co-director of the Center for Restorative Justice at Suffolk University</p>
+                    </div>
+
+<!-- css part -->
+.speech-bubble {
+  float: left;
+  width: 50%;
+  position:relative;
+  top:0;
+  background-color: #88c070;
+  border-radius: 10px;
+  padding: 0.3em 0.3em;
+  position: relative;
+  box-shadow: 7px 30px 40px #545353;
+  transition: 0.5s;
+  animation: speech .7s linear 1;
+  margin-left: 20px;
+}
+
+.speech-bubble:after{
+  content: '';
+  position: absolute;
+  border: 0.5em solid transparent;
+  border-top-color: #88c070;
+  border-right-color: #88c070;
+  right:100%;
+  top: 20%;
+  transform: skewY(20deg);
+  transform-origin: 100% 100%;
+}
