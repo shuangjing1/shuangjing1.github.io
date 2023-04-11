@@ -1,0 +1,624 @@
+@font-face {
+  font-family: "IvarHeadline-Regular";
+   src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/IvarHeadline-Regular.woff2);
+ }  
+ @font-face {
+  font-family: "IvarHeadline-Italic";
+   src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/IvarHeadline-Italic.woff2);
+ } 
+ @font-face {
+  font-family: "IvarHeadline-Bold";
+   src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/IvarHeadline-Bold.woff2);
+ }  
+ @font-face {
+  font-family: "IvarHeadline-BoldItalic";
+   src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/IvarHeadline-Italic.woff2);
+ } 
+ @font-face {
+  font-family: "IvarText-Regular";
+   src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/IvarText-Regular.woff2);
+ } 
+ @font-face {
+  font-family: "IvarText-Italic";
+   src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/IvarText-Regular.woff2);
+ }
+ @font-face {
+  font-family: "IvarText-Bold";
+   src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/IvarText-Bold.woff2);
+ }
+ @font-face {
+  font-family: "Staff-Regular";
+   src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/Staff-Regular.woff2);
+ }  
+ @font-face {
+  font-family: "Staff-Italic";
+   src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/Staff-Italic.woff2);
+ } 
+ @font-face {
+  font-family: "Staff-Bold";
+   src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/Staff-Bold.woff2);
+ }  
+ @font-face {
+  font-family: "Staff-BoldItalic";
+   src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/Staff-BoldItalic.woff2);
+ } 
+ @font-face {
+  font-family: "Carrie-Regular";
+   src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/VTCCarrie-Regular.woff2);
+ } 
+ /* ------------------ EMANCIPATOR COLORS ---------------------------------------- */
+/* FOREST #31463F */
+/* ROSE #CD395B */
+/* FOREST #31463F */
+/* PINK #F6B0A0 */
+/* PUTTY #F6F2E1 */
+/* SKY #BADEFC */
+/* BLACK #1C1C1C */
+/* HIGHLIGHTER #EBF952 
+gold#FBC24C
+*/
+
+/*    MY TYPE STYLES    */
+
+.header {
+  padding: 10px 0 0px 0;
+    margin: 0;
+    background-color: #31463F;
+      height: 70px;
+      position: sticky;
+      top:0;
+      z-index: 2;
+  }
+  .emancipator-description {
+      background-color: #BADEFC;
+      padding:11px 15px;
+      margin: 0 0px 0px 0px;
+      height: 50px;
+      z-index: 2;
+  }
+  .emancipator-description p {
+          font-family: "Staff-Bold","Arial",sans-serif;
+          font-size: 15px;
+          margin-top: -1px;
+          z-index: 2;
+  }
+
+  /*------------------- FOOTER STYLES ---------------------------------------------------*/
+@media only screen and (max-width:600px) {
+  /* FULL-WIDTH FOR MOBILE */
+.footer {
+  background-color: #F6F2E1;
+  padding: 25px 50px;
+  display:block;
+  margin-top: 50px;
+  }
+}
+@media only screen and (min-width:601px) {
+      /* SPLIT INTO THREE COLUMNS FOR LARGER SCREENS */
+.footer {
+  background-color: #F6F2E1;
+  padding: 25px 50px;
+  display:grid;
+  grid-template-columns: 33% 12% 12% ;
+  grid-column-gap: 4em;
+  margin-top: 50px;
+  }
+}
+.footer img {
+  width: 50%;
+}
+.footer .boilerplate p {
+  font-family: "IvarText-Regular","TimesNewRoman",serif;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.footer .footerbold p {
+  font-family: "Staff-Bold","Arial-Bold",sans-serif;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.body {
+  width:100%;
+  color: #1c1c1c;
+}
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.main {
+  background-color: #F6F2E1;
+  z-index: -1;
+}
+
+@media only screen and (max-width:600px)
+{.headlinediv{
+  position: absolute;
+  top:30px;
+}}
+
+@media only screen and (min-width:601px)
+{.headlinediv{
+  position: absolute;
+  top:80px;
+}}
+
+@media only screen and (max-width:600px)
+{p.author-info{
+  color: #d7d7d7;
+  width: 55%;
+  padding-left: 30px;
+  top:10px;
+  font-family: "IvarHeadline-Bold" ,"Georgia",serif;
+  font-size: 15px;
+}
+}
+
+@media only screen and (min-width:601px)
+{p.author-info{
+  color: #d7d7d7;
+  width: 50%;
+  padding-left: 50px;
+  top:10px;
+  /* text-align: center; */
+  font-family: "IvarHeadline-Bold" ,"Georgia",serif;
+  font-size: 15px;
+}}
+
+@media only screen and (max-width:600px)
+{.headlinediv h1 {
+  position: relative;
+  bottom: 10%;
+  color: #ededed;
+  width: 100%;
+  text-align: left;
+  z-index: 1;
+  padding: 170px 0 0 30px;
+  font-family: "IvarHeadline-Bold" ,"Georgia",serif;
+  font-size: 28px;
+  text-shadow: 4px 4px rgb(46, 43, 43);
+  }
+}
+
+
+@media only screen and (min-width:601px)
+{.headlinediv h1 {
+  position: relative;
+  bottom: 10%;
+  color:#ededed;
+  width: 60%;
+  text-align:left;
+  z-index: 1;
+  margin-top: 10%;
+  padding-top: 50px;
+  padding-left: 50px;
+  font-family:"IvarHeadline-Bold" ,"Georgia",serif;
+  font-size: 42px;
+  text-shadow: 4px 4px rgb(46, 43, 43);
+}
+}
+
+@media only screen and (max-width:600px)
+{.lead-background p{
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: #d7d7d7;
+}
+}
+
+@media only screen and (min-width:601px)
+{.lead-background p{
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  /* margin-left: 200px;
+  margin-right: 200px; */
+  font-size: 27px;
+  color: #d7d7d7;
+}
+}
+
+@media only screen and (max-width:600px)
+{.lead-background{
+  background-color: #31463F;
+    /* background-image: url(./img/black.jpg); */
+    padding: 5% 10%;
+    width: 100%;
+    height: 100%;
+    position:relative;
+}
+}
+
+@media only screen and (min-width:601px)
+{.lead-background{
+  background-color: #31463F;
+  /* background-image: url(./img/black.jpg); */
+  padding: 15% 20%;
+  width: 100%;
+  height: 100%;
+  position:relative;
+}
+}
+
+@media only screen and (max-width:600px)
+{.graf-box{
+  width:100%;
+  position: relative;
+  margin: 0 auto 20px auto;
+}
+}
+
+@media only screen and (min-width:601px)
+{.graf-box{
+  width:50%;
+  position: relative;
+  margin: 0 auto 20px auto;
+}
+}
+
+@media only screen and (max-width:600px)
+{.graf-box p{
+  top:-400px;
+  max-width: 90%; /* 设置文章最大宽度 */
+  margin:18px 0 18px 18px;
+  font-family: IvarText-Regular; /* 字体样式 */
+  font-size: 18px;
+  line-height: 1.8; /* 行高 */
+  color: #333; /* 文字颜色 */
+  }}
+
+@media only screen and (min-width:601px)
+{.graf-box p{
+  top:-400px;
+  max-width: 100%; /* 设置文章最大宽度 */
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-family: IvarText-Regular; /* 字体样式 */
+  font-size: 18px;
+  line-height: 1.8; /* 行高 */
+  color: #333; /* 文字颜色 */
+  }}
+
+@media only screen and (max-width:600px)
+{h2.subheadline{
+    color:#31463F;
+    text-align: left;
+    /* padding-left: 10%; */
+    font-family:"IvarHeadline-Bold";
+    font-size: 24px;
+    margin: 10% auto 10% 5%;
+}}
+
+@media only screen and (min-width:601px)
+{   h2.subheadline{
+    color:#31463F;
+    text-align: left;
+    /* padding-left: 10%; */
+    font-family:"IvarHeadline-Bold";
+    font-size: 24px;
+    margin: 10% auto 10% 0;
+}}
+
+@media only screen and (max-width:600px)
+{p.speech-bubble-quote {
+  margin: 15px;
+  font-size: 18px;
+  color: #31463F;
+}
+
+p.quotsigner {
+  margin: 15px;
+  font-size: 10px;
+  text-align: right;
+  color: #31463F;
+}
+
+.speech-bubble {
+  float: left;
+  width: 100%;
+  position:relative;
+  top:0;
+  background-color: #BADEFC;
+  border-radius: 10px;
+  padding: 20px 20px 0 20px;
+  position: relative;
+  box-shadow: 7px 20px 30px #545353;
+  transition: 0.5s;
+  animation: speech .7s linear 1;
+  margin-bottom: 80px;
+}
+} 
+
+
+@media only screen and (min-width:601px)
+{p.speech-bubble-quote {
+  margin: 15px;
+  font-size: 18px;
+  color: #31463F;
+}
+
+p.quotsigner {
+  margin: 15px;
+  font-size: 10px;
+  text-align: right;
+  color: #31463F;
+}
+
+.speech-bubble {
+  float: left;
+  width: 50%;
+  position:relative;
+  top:0;
+  background-color: #BADEFC;
+  border-radius: 10px;
+  padding: 20px 20px 5px 20px;
+  position: relative;
+  box-shadow: 7px 20px 30px #545353;
+  transition: 0.5s;
+  animation: speech .7s linear 1;
+  margin-left: 20px;
+}
+
+.speech-bubble:after{
+  content: '';
+  position: absolute;
+  border: 0.5em solid transparent;
+  border-top-color: #BADEFC;
+  border-right-color: #BADEFC;
+  right:100%;
+  top: 20%;
+  transform: skewY(20deg);
+  transform-origin: 100% 100%;
+}
+}
+
+@media only screen and (max-width:600px)
+{.Susan  {
+  float: left;
+  width: 100%;
+  /* border-radius: 50%; */
+  padding: 0%;
+  margin-bottom: 20px;
+}
+}
+/* add caption */
+
+@media only screen and (min-width:601px)
+{.Susan  {
+  float:left;
+  width: 20%;
+  border-radius: 50%;
+  padding: 0%;
+  margin-left: 0px;
+  margin-right: 30px;
+  margin-top: 0px;
+}}
+
+
+@media only screen and (max-width:600px)
+{.quote-sec{
+  position: relative;
+  height: 340px;
+  width: 70%;
+  margin: 0 auto 100px auto;
+}}
+
+@media only screen and (min-width:601px)
+{.quote-sec{
+  position: relative;
+  height: 220px;
+  width: 50%;
+  margin: 0 auto 100px auto;
+}}
+
+@media only screen and (max-width:600px)
+{.flourish{
+  width: 90%;
+  margin: 10px 30px 10px 5%;
+}}
+
+@media only screen and (min-width:601px)
+{.flourish{
+  width: 50%;
+  margin: 10px 300px 10px 24%;
+}}
+
+a:link{
+  text-decoration: dotted;
+  color: #d7d7d7;
+}
+a:visited{
+  color: #6462e9;
+}
+a:hover{
+  color: rgb(86, 165, 225);
+}
+
+.headline {
+  margin-bottom:-4px;
+}
+
+.headlinevid{
+  position: relative;
+  background: url(./img/headlinevid.mp4) no-repeat fixed center;
+  background-size: cover;
+  /* z-index: 0; */
+  width:100%; 
+  height:100%;
+}
+@media only screen and (max-width:600px)
+{.author-info {
+  position: relative;
+  top: 0;
+  padding-left: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  height: 540PX;
+}}
+
+@media only screen and (min-width:601px)
+{.author-info {
+  position: relative;
+  top: 0;
+  padding-left: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}}
+
+
+@keyframes speech{
+
+  0%{top: -20px;}
+  25%{top:5px; box-shadow: 7px 40px 40px #545353;}
+  50%{top:20px;}
+  75%{top: -20px;box-shadow: 7px -10px 50px #545353;}
+  100%{top:0;}
+}
+
+
+
+.sec-1-subheadline-box {
+    background: url(./img/whichlawisbroken.jpg) no-repeat fixed center;
+    background-size: cover;
+}
+
+
+span.dropcap{
+  float: left;
+  font-size: 300%;
+  line-height: 0.3;
+}
+
+span.dropcap{
+  float: left;
+  font-size: 300%;
+  line-height: 0.3;
+}
+
+.text-box {
+    width: 100%;
+    height: 50%;
+    /* 绝对定位 */
+    position: absolute;
+    /* bottom: 25%; */
+    /* 文字居中 */
+    text-align:left;
+    /* padding-left: 20%; */
+    /* background-color: rgba(0, 0, 0, .3);
+    transform-origin: center bottom;
+    transform: skew(0, -8deg); */
+
+}
+
+
+.audio-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  #audio {
+    display: none;
+  }
+
+/* .text-box .cnt {
+    display: inline-block;
+    text-align: right;
+    margin: 40px 0 10px;
+    width: 90%;
+    max-width: 990px;
+    transform-origin: right bottom;
+    transform: skew(0, 8deg);
+} */
+
+.bar {
+  padding-left: 300px;
+  width: 700px;
+}
+
+.cnt h2 {
+    /* margin-top: 100px; */
+    font-size: 36px;
+    /* font-family: 'modern_no._20regular',
+        serif; */
+    letter-spacing: 0.3em;
+    /* 大写字母 */
+    /* text-transform: uppercase; */
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.cnt p {
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+    color: #fff;
+    letter-spacing: 0.1em;
+}
+  
+  .voice-bar {
+    height: 10px;
+    background-color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  p.quots{
+    margin: 0.3em;
+    font-family: IvarText-Regular;
+    font-size: 15px;
+    color: #fff;
+  }
+
+ 
+
+@media only screen and (max-width: 600px) {
+  /* For mobile */
+  
+  .container{
+    width:100%;
+    margin:0 auto 0 auto;
+  }
+  }
+  
+@media only screen and (min-width: 481px) {
+  /* For tablets in portrait orientation and extra large phones */
+  
+  .container{
+    width:100%;
+    margin:0 auto 0 auto;
+  }
+  }
+  
+  
+@media only screen and (min-width: 768px) {
+  /* For tablets */
+  
+  .container{
+    width:100%;
+    margin:0 auto 0 auto;
+  }
+  }
+  
+@media only screen and (min-width: 960px) {
+  /* For laptops */
+  
+  .container{
+    width:100%;
+    margin:0 auto 0 auto;
+  }
+  }
+  
+  @media only screen and (min-width: 1200px) {
+  /* For desktops */
+  
+  .container{
+    width:100%;
+    margin:0 auto 0 auto;
+  }
+  }
