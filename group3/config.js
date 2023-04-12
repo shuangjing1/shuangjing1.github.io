@@ -177,7 +177,7 @@ function popup() {
         })
           .setLngLat(feature.geometry.coordinates)
           .setHTML(
-            `<h3>${feature.properties.State}</h3>`
+            `<h6><b>${feature.properties.orgName}</b></h6><p>${feature.properties.address}</p>`
           )
           .addTo(map);
       }
