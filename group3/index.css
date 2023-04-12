@@ -90,7 +90,7 @@ gold#FBC24C
   background-color: #F6F2E1;
   padding: 25px 50px;
   display:block;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   }
 }
 @media only screen and (min-width:601px) {
@@ -101,7 +101,7 @@ gold#FBC24C
   display:grid;
   grid-template-columns: 33% 12% 12% ;
   grid-column-gap: 4em;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   }
 }
 .footer img {
@@ -428,8 +428,8 @@ p.quotsigner {
 }}
 
 a:link{
-  text-decoration: dotted;
-  color: #d7d7d7;
+  text-decoration: underline;
+  color: #1c1c1c;
 }
 a:visited{
   color: #6462e9;
@@ -622,3 +622,218 @@ span.dropcap{
     margin:0 auto 0 auto;
   }
   }
+
+  /* Mapbox Styling Start */
+  #map {
+    top:0;
+    height: 100vh;
+    width:inherit;
+    position: sticky;
+  }
+  #mapInset {
+    top: 650px;
+    left: 1200px;
+    height: 180px;
+    width: 250px;
+    max-width: 100%;
+    position: absolute;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+  }
+
+  #mapInset .mapboxgl-ctrl-bottom-left{
+      display: none;
+  }
+
+  #legend {
+  background-color: #1c1c1ccc;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 30px;
+  bottom: 70px;
+  padding: 15px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+
+  .legend-title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #fff;
+  }
+
+  .legend-items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  }
+
+  .legend-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 5px 0 5px;
+  color: #fff;
+  }
+
+  .legend-key {
+  display: inline-block;
+  text-align: center; /* add this line */
+  border-radius: 20%;
+  width: 30px;
+  height: 10px;
+  margin-bottom: 5px;
+  }
+
+  .legend-value {
+  display: inline-block;
+  /* margin-left: 10px; */
+  text-align: center;
+  font-size: 12px;
+  }
+  @media (max-width: 500px) {
+      #mapInset {
+          display: none;
+      }
+      #legend {
+          display: none;
+      }
+  }
+  #header {
+      margin: auto;
+      width: 100%;
+      position: relative;
+      z-index: 5;
+  }
+  #header h1, #header h2, #header p {
+      margin: 0;
+      padding: 2vh 2vw;
+      text-align: center;
+  }
+  #footer {
+      width: 100%;
+      min-height: 5vh;
+      padding-top: 2vh;
+      padding-bottom: 2vh;
+      text-align: center;
+      line-height: 25px;
+      font-size: 13px;
+      position: relative;
+      z-index: 5;
+  }
+  #features {
+      /* padding-top: 50vh;
+      padding-bottom: 10vh; */
+  }
+  .hidden {
+      visibility: hidden;
+  }
+  .centered {
+      width: 50vw;
+      margin: 0 auto;
+  }
+  .lefty {
+      width: 33vw;
+      margin-left: 5vw;
+  }
+  .righty {
+      width: 33vw;
+      margin-left: 62vw;
+  }
+  .fully {
+      width: 100%;
+      margin: auto;
+  }
+  .light {
+      color: #444;
+      background-color: #fafafa;
+  }
+  .dark {
+      color: #fafafa;
+      background-color: #444;
+      border-radius: 10px;
+  }
+
+  .step {
+      padding-bottom: 50vh;
+      /* margin-bottom: 10vh; */
+      opacity: 0.25;
+  }
+
+  .step a, a:hover, a:visited {
+    color: #fafafa;
+    text-decoration: underline;
+}
+  .step.active {
+      opacity: .90;
+  }
+
+  .step div {
+      padding:  25px 50px;
+      line-height: 25px;
+      font-size: 18px;
+  }
+
+  .step img {
+      width: 100%;
+  }
+
+  @media (max-width: 750px) {
+      .centered, .lefty, .righty, .fully {
+          width: 90vw;
+          margin: 0 auto;
+      }
+
+  }
+
+  /* Fix issue on mobile browser where scroll breaks  */
+  .mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan,
+  .mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan .mapboxgl-canvas {
+      touch-action: unset;
+  }
+  /* Mapbox Styling End */
+
+  /* Search Tool Start */
+  select {
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .searchHeader {
+    background-color: #31463F;
+    color: white;
+    padding: 1rem;
+  }
+
+  #searchTool {
+    padding: 1rem;
+    padding-bottom: 3rem;
+  }
+  
+  #searchTool a {
+    color: #1c1c1c;
+    text-decoration: underline;
+  }
+  
+  ul {
+    /* border: 1px solid #1C1C1C; */
+  }
+  
+  #sub1 {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    /* border: 1px solid #1C1C1C; */
+    margin-bottom: 0;
+  }
+  
+  #sub2 {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    /* border: 1px solid #1C1C1C; */
+    margin-bottom: 0;
+  }
+  /* Search Tool End */
