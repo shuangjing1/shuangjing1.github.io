@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css' rel='stylesheet' />
+     <link
+       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+       rel="stylesheet"
+       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+       crossorigin="anonymous"
+     />
+    <title>Expanding the Circle</title>
+    <meta name="viewport" content="width=device-width">
+</head>
+<body>
+    <div class="header">
+        <img src="https://mediainnovation.camd.northeastern.edu/2023/restorativejustice/images/HamburgerMenu--theme-dark.svg" style="width: 30px; margin: 0 20px;">
+        <img src="https://mediainnovation.camd.northeastern.edu/2023/restorativejustice/images/Emancipator_E_Reversed.png" style="width: 30px; ">
+    </div>
+    
+    <div class="emancipator-description">
+        <p>About this section &#x25BC;</p>
+    </div>
+        
+    <main id="main">
+            <div class="header-container">
+                <h1 class="headline">The future of punishment and restoration in the U.S. criminal justice system</h1>
+                <h2 class="subheader">Programs using restorative justice can be a successful alternative to imprisonment, but advocates and experts argue that the practice still has a long way to go before becoming a large-scale solution to the problem of mass incarceration.</h2>
+                <div class="byline">
+                        <p>By<span class="names">Pavi Rajesh, Elijiah Nicholson-Messmer, Kaitlyn Fiery, Shuang Jing, Benjamin Tan and Rui Sun</span></p>
+                </div>
+                <div class="image-relative">
+                        <img id="image" src="img/openimg.jpg" alt="A Restorative Justice coordinator has students link thumbs to form a circle">
+                        <figcaption class="img-cap">
+                            <p>A Restorative Justice coordinator has students link thumbs to form a circle  in Oakland, California, June 11, 2013.<span class="credit">The San Francisco Chronicle via Getty Images</span></p>
+                        </figcaption>
+                </div>
+            </div>
+
+            <div class="article-body">
+                <p><span class="dropcap">T</span>halia González wants to shut down the prison system. She's also a law professor. And like many restorative justice advocates, she's grappling with a tension inherent to every social movement: how do you work within the existing system while pushing for a future that looks very different.</p>
+
+                <p>“I'm an abolitionist,” said González who teaches at the University of California San Francisco, “but I also know that tomorrow a young person is going to stand up in court. If they could have a restorative option as opposed to not, I want that option to be available.”</p>
+
+                <p>González discovered restorative justice as a law student at Northwestern University when she worked as a circle practitioner, leading discussions between offenders and victims at a juvenile detention facility in Chicago. Since then, she’s become a leading expert in the field and has conducted extensive research on the opportunities and limitations of restorative justice, both domestically and abroad.</p>
+            </div>
+
+
+            <div class="popoutgraph">
+                <img src="img/U.S. Prisons By the Numbers Graphic.jpg" alt="U.S. Prisons By the Numbers Graphic">
+                <figcaption class="img-cap">
+                    <p>U.S. Prisons By the Numbers Graphic</p>
+                </figcaption>
+            </div>
+
+            <div class="article-body">
+                <p>While advocates like González argue that restorative justice can’t fix all of the problems at the root of the criminal justice system, they believe it can chip away at the American prison-industrial complex which  primarily has one broad tool to address any crime from non-violent drug offenses to homicide: incarceration.</p>
+            
+                <p>Victims of crime aren’t satisfied with incarceration as a tool to address the harms done to them. Between 2006 and 2019, <a herf="https://bjs.ojp.gov/content/pub/pdf/vnrp0610.pdf" class="article-link">52%</a> of all violent crimes were left unreported to the police.“If you think about the way our criminal legal system currently works, there is little to no room within the structure of a court case for the victims,” said Susan Maze-Rothstein, the co-director of the Center for Restorative Justice at Suffolk University. “They are relegated to the role of witness. And so, arguably, what we are doing currently is more retraumatizing because people are left with their harm and their pain.”</p>
+            </div>
+
+            <div class="quote-sec">
+                    <img class="Susan" src="img/susan.jpg" alt="Susan Maze-Rothstein">
+                    <div class="speech-bubble">
+                        <audio controls src="Susan_clip1.mp3" style="width:100%"></audio>
+                        <p class="speech-bubble-quote">&ldquo; If you think about the way our criminal legal system currently works, there is little to no room within the structure of a court case for the victims.&rdquo;</p>
+                        <p class="quotsigner">Susan Maze-Rothstein, Co-director of the Center for Restorative Justice at Suffolk University</p>
+                    </div>
+            </div>
+
+
+        <div class="article-body">
+            <h2 class="subheadline">The <span style="color:#CD395B">growth</span> of restorative justice</h2>
+                <p><span class="dropcap">T</span>he need for alternative responses to crime, along with promising <a href="https://doc.vermont.gov/sites/correct/files/documents/Restorative_Justice/CJC/CoSA%20in%20Vermont.pdf">studies</a> on the effectiveness of restorative justice in lowering recidivism rates, has led to increased federal funding and a growth of restorative justice programs across the country in settings such as schools and prisons.</p>
+
+                <p>Last year, the U.S. Department of Justice <a herf="https://www.justice.gov/opa/pr/justice-department-will-award-57-million-support-justice-system-reforms-and-racial-equity" class="article-link">announced</a> it would award almost $57 million to support criminal justice reform programs and advance racial equity within the criminal justice system. From that budget, $8 million specifically went toward promoting restorative justice programs among other similar causes. In addition, experts in the growing field are meeting to share ideas and insights from their work.</p>
+
+                <p>Still, advocates point to the lack of a national framework on what qualifies as restorative justice or how it should be used.</p>
+
+                <p>“We don't even have a comprehensive map of how many prosecutors and officers are using restorative justice,” said González. “It's hard to know what you know when you don't know what the hell's going on.”</p>
+        </div>
+
+        <div class="mapboxcap"><p>header for mapbox, update later</p></div>
+         <!-- Mapbox Visualization Start -->
+         <div id="mapContainer" style="position: relative;">
+            <div id="map">
+                <div id="mapInset"></div>
+                <div id="legend">
+                    <div class="legend-title"></div>
+                        <div class="legend-items">
+                            <div class="legend-item">
+                                <span class="legend-key"></span>
+                                <span class="legend-value"></span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-key"></span>
+                                <span class="legend-value"></span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-key"></span>
+                                <span class="legend-value"></span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-key"></span>
+                                <span class="legend-value"></span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-key"></span>
+                                <span class="legend-value"></span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-key"></span>
+                                <span class="legend-value"></span>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div id="story"></div>
+        </div>
+            <!-- Mapbox Visualization End -->
+
+        <div class="article-body">
+            <h2 class="subheadline">A <span style="color:#CD395B">shift</span> toward accountability and healing</h2>
+            <p><span class="dropcap">“W</span>e are in a place right now where our system is very punitive and has very high sentences,” said Adriaan Laani, the Touroff-Glueck Professor of Law at Harvard University. “That has created an expectation among people that the only way to take harm seriously is to have a very high sentence …. You have to get over this assumption that people have that a restorative process is somehow not taking it seriously. Restorative justice can really get at true accountability in a way that the regular criminal process of incarceration does not.”</p>
+        </div>
+            <div class="quote-sec">
+                    <img class="Susan"src="img/adriaan.jpg">
+                    <div class="speech-bubble">
+                        <audio controls src="Adriaan Lanni_clip.mp3" style="width:100%"></audio>
+                        <p class="speech-bubble-quote">&ldquo; We are in a place right now where our system is very punitive and has very high sentences, and that has created a kind of expectation among people that the only way to take harm seriously is to have a very high sentence.&rdquo;</p>
+                        <p class="quotsigner">Adriaan Laani, the Touroff-Glueck Professor of Law at Harvard University</p>
+                    </div>
+            </div>
+
+        <div class="article-body">
+            <p>Circles of Support and Accountability (CoSA) programs have been used to reintegrate high-risk offenders in Vermont for the past 20 years. Studies show offenders who participated in CoSA programs were less likely to commit new crimes.</p>
+        </div>
+            
+    <div class="barchart">
+        <div class="flourish">
+            <div class="flourish-embed flourish-chart" data-src="visualisation/13245780"><script src="https://public.flourish.studio/resources/embed.js"></script>
+            </div>
+        </div>
+        <!-- <div class="explaination">
+                <img src="img/expbg.png">
+                <p>Nugent and his colleages reviewed the recidivism reduction results of fours studies of victim-offender mediation (VOM) programs for juvenile offenders conducted in the 1990s.  Overall, the four studies produced a combined sample of 619 juvenile offenders who participated in a VOM program and 679 who did not.  The researchers found that participation in VOM reduced recidivism by 32%.  Based on a 1-year follow-up period, VOM participants had a recidivism rate of 19% compared to 28% for their comparison group counterparts.</p>
+            </div> -->
+    </div>
+
+
+        <div class="article-body">
+                <h2 class="subheadline">Despite successes, growing <span style="color:#CD395B">pains</span> persist</h2>
+                <p><span class="dropcap">“T</span>here’s a huge issue of equal access to restorative justice and equity in particular,” said Laani. “One [question] is whether or not all communities should have access to restorative justice. Ideally, you don’t want a kind of discretionary system where it’s just up in the air, but you want to have a very clear criteria for when people are given the option of taking a restorative process.”</p>
+
+                <div class="vidcontainer">
+                    <video width="100%" controls>
+                      <source src="img/Laani cut 2 for website.MOV" type="video/quicktime">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+
+                <p>At the moment, these programs are rare and only accessible to a fraction of offenders. Experts like Lindsey Pointer, an assistant professor at Vermont Law and Graduate School and the principal investigator of the National Center on Restorative Justice worry that that giving judges and police officers final say over who qualifies to participate in restorative justice creates room for bias based on offender’s race, gender, type of crime and criminal history.</p>
+
+                <p> “We have something that's shown a lot of promise in terms of reforming the system, but we run a significant risk if we have these referral structures that could be replicating the same bias that we see elsewhere. We could end up actually exacerbating the differences in outcomes for people if we're only having young white people from affluent backgrounds being referred, for example.”</p>
+
+                <div class="vidcontainer">
+                    <video width="100%" controls>
+                      <source src="img/Lin cut1.MOV" type="video/quicktime">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                
+                <p>“In the U.S., our attachment to a racial capitalist society has been adherent to incarcerating Black and Brown folks for centuries,” said González. “This isn't new business. Restorative justice isn't going to solve that.”</p>
+        </div>
+
+        <div class="article-body">
+                <h2 class="subheadline"><span style="color:#CD395B">Beyond</span> the criminal justice system</h2>
+                <p><span class="dropcap">H</span>oward Zehr, a pioneering advocate of restorative justice, said when he began his work in the late 1970s, restorative justice addressed problems in the criminal legal system. As the movement has grown, however, it has been tried in other settings—from the Smithsonian Museum of American History to South Africa’s Truth and Reconciliation Commission and even American schools. </p>
+
+                <p>Many advocates see more promise in implementing restorative justice efforts upstream of incarceration, before a serious crime has been committed.</p>
+
+                <p>“It is in that building of community, maintaining and sustaining community with these practices that you’re actually creating justice,” said Maze-Rothstein.</p>
+
+                <p>Restorative justice was not originally linked to crime. Modern-day restorative justice practices have their roots in indigenous communities, including Māori and Navajo traditions. Through a process which some tribes called “peacemaking,” Native American communities often worked through disputes by focusing on repairing relationships and finding solutions instead of placing blame and dishing punishment. Consequently, many experts believe these values are so strong that they support all facets of community, not just when a crime has been committed. </p>
+
+                <p>As Maze-Rothstein said, “There is no human activity that could not benefit from these practices.”</p>
+        </div>
+
+        <!-- search tool begin -->
+        <div class="container" id="searchTool">
+            <div class="row">
+              <div class="col-lg-8 offset-lg-2">
+                <h4 class="searchHeader">
+                  Find out what's happenning with restorative justice in
+                <select id="stateSelect" onchange="myFunction()">
+                  <option>your state</option>
+                  <option value="Alabama">Alabama</option>
+                  <option value="Alaska">Alaska</option>
+                  <option value="Arizona">Arizona</option>
+                  <option value="Arkansas">Arkansas</option>
+                  <option value="California">California</option>
+                  <option value="Colorado">Colorado</option>
+                  <option value="Connecticut">Connecticut</option>
+                  <option value="Delaware">Delaware</option>
+                  <option value="Florida">Florida</option>
+                  <option value="Georgia">Georgia</option>
+                  <option value="Hawaii">Hawaii</option>
+                  <option value="Idaho">Idaho</option>
+                  <option value="Illinois">Illinois</option>
+                  <option value="Indiana">Indiana</option>
+                  <option value="Iowa">Iowa</option>
+                  <option value="Kansas">Kansas</option>
+                  <option value="Kentucky">Kentucky</option>
+                  <option value="Louisiana">Louisiana</option>
+                  <option value="Maine">Maine</option>
+                  <option value="Maryland">Maryland</option>
+                  <option value="Massachusetts">Massachusetts</option>
+                  <option value="Michigan">Michigan</option>
+                  <option value="Minnesota">Minnesota</option>
+                  <option value="Mississippi">Mississippi</option>
+                  <option value="Missouri">Missouri</option>
+                  <option value="Montana">Montana</option>
+                  <option value="Nebraska">Nebraska</option>
+                  <option value="Nevada">Nevada</option>
+                  <option value="New Hampshire">New Hampshire</option>
+                  <option value="New Jersey">New Jersey</option>
+                  <option value="New Mexico">New Mexico</option>
+                  <option value="New York">New York</option>
+                  <option value="North Carolina">North Carolina</option>
+                  <option value="North Dakota">North Dakota</option>
+                  <option value="Ohio">Ohio</option>
+                  <option value="Oklahoma">Oklahoma</option>
+                  <option value="Oregon">Oregon</option>
+                  <option value="Pennsylvania">Pennsylvania</option>
+                  <option value="Rhode Island">Rhode Island</option>
+                  <option value="South Carolina">South Carolina</option>
+                  <option value="South Dakota">South Dakota</option>
+                  <option value="Tennessee">Tennessee</option>
+                  <option value="Texas">Texas</option>
+                  <option value="Utah">Utah</option>
+                  <option value="Vermont">Vermont</option>
+                  <option value="Virginia">Virginia</option>
+                  <option value="Washington">Washington</option>
+                  <option value="West Virginia">West Virginia</option>
+                  <option value="Wisconsin">Wisconsin</option>
+                  <option value="Wyoming">Wyoming</option>
+                </select>
+                </h4>
+              </div>
+            </div>
+            <div class="row justify-content-lg-center">
+              <div class="col-lg-4">
+                <ul id="myUL" class="list-group"><h5 id="sub1"></h5></ul>
+              </div>
+              <div class="col-lg-4">
+                <ul id="myUL2" class="list-group"><h5 id="sub2"></h5></ul>
+              </div>
+            </div>
+          </div>
+          <!-- search tool end -->
+
+
+        
+
+        <div class="article-body">
+                    <h2 class="subheadline">Barriers remain, but advocates are <span style="color:#CD395B">optimistic</span></h2>
+                    <p><span class="dropcap">B</span>ut getting widespread support for restorative justice is still elusive. Underlying its difficult adaptation into the broader criminal justice system is what Pointer calls a “public imagination problem.”</p>
+
+                    <p>“That is the hurdle [that] we need to get over in terms of just expanding what that word justice can mean for people,” said Pointer. “So, can justice mean understanding impact and repairing harm? Can justice mean transforming the structural and equity characteristics that led to the need that fueled the behavior that caused harm in the first place? Once we're past that hurdle, once that public imagination is expanded, then I think we would be able to do something like what New Zealand, for example, has done, where restorative justice is a default option.”</p>
+
+                    <p>New Zealand has one of the most comprehensive national restorative justice systems in the world, according to Zehr. But, even the current framework there does not fully incorporate itRJ into the justice system. Outlining what a national restorative justice system could look like is a barrier for the movement, Zehr said.</p>
+
+                    <p>When Pointer introduces people to restorative justice, they can be quick to dismiss it as a utopian idea. “I get that,” Pointer said. “But I just try to help people see [the] common human need, [the] common human experience in the wake of crime. And then it's less utopian, it's less idealistic about people and it's more just actually responsive to the needs [of the harmed party].”  </p>
+
+                    <p>Expanding that public imagination is a slow process, advocates say. But, the growth of restorative justice in recent years demonstrates it as a possibility, one advocates are pushing for everyday.</p> 
+        </div>
+
+    </main>
+
+    <div class="footer">
+        <div class="boilerplate">
+        <img src="https://mediainnovation.camd.northeastern.edu/2023/restorativejustice/images/Emancipator_Logo_2c.png">
+        <p class="footertext">The Emancipator is a reimagining of the first abolitionist newspaper in the United States with a focus on explaining and identifying solutions to structural racism. The publication is housed within the Center for Antiracist Research at Boston University and is provided without a paywall.</p>
+        </div>
+        <div class="footerbold">
+            <p>About</p>
+            <p>Masthead</p>
+            <p>Contact</p>
+            <p>Press</p>
+            <p>Supporters</p>
+        </div>
+        
+        <div class="footerbold">
+           <p>Sign up for our</p> newsletters</p>
+            <p>Read our latest</p> newsletter</p>
+            <p>Privacy policy</p>
+            <p>Terms of Service</p>
+        </div>
+
+
+   <!-- Loading scripts for Mapbox -->
+   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js'></script>
+   <script src="https://unpkg.com/intersection-observer@0.12.0/intersection-observer.js"></script>
+   <script src="https://unpkg.com/scrollama"></script>
+   <script src="https://d3js.org/d3.v7.min.js"></script>
+   <script src="./config.js"></script>
+   <!-- script for search tool -->
+   <script
+     src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+     crossorigin="anonymous"
+   ></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+   <script src="searchTool.js"></script>     
+</body>
+</html>
+
+<!-- need to do: caption, resposive -->
