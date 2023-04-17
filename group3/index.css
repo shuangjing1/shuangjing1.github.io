@@ -889,3 +889,214 @@ z-index: 1;
     margin-bottom: 0;
   }
   /* Search Tool End */
+
+/* ------------------- TEASERS ---------------------------------- */
+h2.teasertitle {
+    font-size:1.2em; 
+    letter-spacing: 2px; 
+    text-transform:uppercase;
+    color:#CD395B
+}
+.team1teaser {
+        background-image: url("https://mediainnovation.camd.northeastern.edu/2023/restorativejustice/images/thumbnail-team1.png");
+        background-repeat: no-repeat;
+    background-size:cover;
+  background-position: center; 
+    min-height: 200px;
+    }
+.team2teaser {
+        background-image: url("https://mediainnovation.camd.northeastern.edu/2023/restorativejustice/images/thumbnail-team2-turner.png");
+        background-repeat: no-repeat;
+    background-size:cover;
+  background-position: center; 
+    min-height: 200px;
+    }
+.team3teaser {
+        background-image: url("https://mediainnovation.camd.northeastern.edu/2023/restorativejustice/images/thumbnail-team3.jpg");
+        background-repeat: no-repeat;
+    background-size:cover;
+  background-position: center; 
+    min-height: 200px;
+    }
+a:link {text-decoration: none}
+/* --------------- TEASER FOR MOBILE --------------------------- */
+@media only screen and (max-width: 600px) {
+.teaserwrapper {
+    display:block;
+    width:90%;
+    margin:0 auto;
+}
+    
+.teaserwrapper a.teaserlink * {
+        text-decoration: none;
+        border-bottom: 0;
+    }
+a:link .teaseritem {
+    display:block;
+    background-color: white;
+    text-decoration: none;
+    border: 4px solid #BADEFC;
+    margin-bottom: 30px;
+}
+    
+a:visited .teaseritem {
+    display:block;
+    background-color: white;
+    text-decoration: none;
+    border: 4px solid #BADEFC;
+}
+    
+a:hover .teaseritem {
+    display:block;
+    background-color: #F6F2E1;
+    text-decoration: none;
+    border: 4px solid #CD395B;
+}
+.teaseritem img {
+        width: 100%;
+    }
+    
+img.teaserhighlight {
+    width: 150px;
+    margin-left: 33%;
+    position: relative;
+    top:-20px;
+    }
+    
+ a .teaseritem .teaserblock h3 {
+        font-family: "Staff-Bold","Arial-Bold",sans-serif;
+        font-size: 1.5em;
+        line-height: 1.0;
+        color: #1c1c1c; 
+        text-align: center;     
+        padding: -50px 20px 0 20px;
+        margin:0;
+        text-decoration: none;
+    }
+    
+a .teaserblock p {
+        font-family: "IvarText-Regular","Georgia",serif;
+        font-size: 18px;
+        line-height: 1.2;
+        color: #1c1c1c;
+        text-align: center;
+        padding: 0px 20px 20px 20px;
+        margin:0;
+    }   
+}
+/* --------------- TEASER FROM MOBILE TO TABLET ------------- */
+@media only screen and (min-width: 601px) {
+.teaserwrapper {
+    display:block;
+    width:70%;
+    margin:0 auto;
+}
+    
+.teaserwrapper a.teaserlink {
+        text-decoration: none;
+        border-bottom: 0;
+    }
+a:link .teaseritem {
+    display:block;
+    background-color: white;
+    text-decoration: none;
+    border: 4px solid #BADEFC;
+    margin-bottom: 30px;
+}
+    
+a:visited .teaseritem {
+    display:block;
+    background-color: white;
+    text-decoration: none;
+    border: 4px solid #BADEFC;
+}
+    
+a:hover .teaseritem {
+    display:block;
+    background-color: #F6F2E1;
+    text-decoration: none;
+    border: 4px solid #CD395B;
+}
+.teaseritem img {
+        width: 100%;
+    }
+    
+img.teaserhighlight {
+    width: 150px;
+    margin-left: 33%;
+    position: relative;
+    top:-20px;
+    }
+    
+ a:link .teaserblock h3 {
+        font-family: "Staff-Bold","Arial-Bold",sans-serif;
+        font-size: 1.2em;
+        line-height: 1.0;
+        color: #1c1c1c; 
+        text-align: center;
+     text-decoration: none;
+        padding: 0px 20px 0 20px;
+        margin:0;
+    }
+    
+a .teaserblock p {
+        font-family: "IvarText-Regular","Georgia",serif;
+        font-size: 16px;
+        line-height: 1.2;
+        color: #1c1c1c;
+        text-align: center;
+        padding: 0px 20px 20px 20px;
+        margin:0;
+    }   
+}
+/* --------------- TEASER FROM TABLET to LAPTOP ------------- */
+@media only screen and (min-width: 961px) {
+.teaserwrapper {
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 20px;
+    width:90%;
+    margin:0 auto;
+}
+    
+    .teaserwrapper a.teaserlink {
+        text-decoration: none;
+        border-bottom: 0;
+    }
+a:link .teaseritem {
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 0px;
+    background-color: white;
+    text-decoration: none;
+    border: 8px solid #BADEFC;
+}
+    
+a:visited .teaseritem {
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 0px;
+    background-color: white;
+    text-decoration: none;
+    border: 8px solid #BADEFC;
+}
+    
+    a:hover .teaseritem {
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 0px;
+    background-color: #F6F2E1;
+    text-decoration: none;
+    border:8px solid #CD395B;
+}
+}
+/* --------------- TEASER FOR DESKTOP AND LARGER ------------- */
+@media only screen and (min-width: 1281px) {
+.teaserwrapper {
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 20px;
+    width:70%;
+    margin:0 auto;
+}
+ t the bottom  (
