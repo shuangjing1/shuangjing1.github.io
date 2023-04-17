@@ -417,20 +417,6 @@ p.quotsigner {
   text-transform: uppercase;
 }
 
-@media only screen and (max-width:600px)
-{.article-body video{
-  /* margin: 10px 100px 10px 100px; */
-  max-width: 100%;
-}}
-
-
-@media only screen and (min-width:601px)
-{.vidcontainer{
-  position: relative;
-  max-width: 100%;
-  padding: 0 25%;
-}}
-
 span.dropcap {
   font-family:"IvarText-Regular", Georgia, 'Times New Roman', Times, serif;
   text-transform: uppercase;
