@@ -473,7 +473,7 @@ span.dropcap {
   position: relative;
   height: 340px;
   width: 70%;
-  margin: 0 auto 100px auto;
+  margin: 0 auto 450px auto;
 }}
 
 @media only screen and (min-width:601px)
@@ -481,7 +481,7 @@ span.dropcap {
   position: relative;
   height: 220px;
   width: 50%;
-  margin: 100px auto 100px auto;
+  margin: 100px auto 200px auto;
 }}
 
 @media only screen and (max-width:600px)
