@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<link rel="stylesheet" href="./style.css">
+
+	<section>
+	<title >Fire incidents in Boston</title>
+    </section>
+	<style>
+		.author-info {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 10px;
+			font-size: 18px;
+			color: #999999;
+		}
+		.author-info span {
+			margin-right: 10px;
+		}
+	</style>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			line-height: 1.5;
+			text-align: justify;
+			margin: 0;
+			padding: 0;
+		}
+		h2, h3, h4, h5, h6 {
+			color:#999999;
+			font-weight: bold;
+			margin-top: 30px;
+			margin-bottom: 20px;
+		}
+		p {
+			margin-bottom: 20px;
+		}
+	</style>
+	
+</head>
+<body>
+	<div class="vid">
+	<video class="bgv">
+	</video>
+    </div>
+    <div class="content">
+		<h1>Fire incidents in Boston</h1>
+		<div class="author-info">
+			<span>Written by Shuang Jing</span>
+		</div>
+	</div>
+<div class="aritcle">
+	<div class="text">
+		<p>Fire incidents can have devastating consequences, causing property damage, injuries, and loss of life. As a result, cities around the world invest significant resources in fire prevention and response. In the city of Boston, the fire department responds to an average of 40,000 incidents per year, ranging from small fires to major emergencies.
+			In this project, I will analyze data from the Boston Fire Incident Reporting System for the period from February 11, 2023, to March 11, 2023. By exploring the patterns and trends in fire incidents, I wish to provide insights that can inform fire prevention strategies and improve emergency response in the city.</p>
+			<h2>Data analysis</h2>
+				<p>We conducted an exploratory analysis of the fire incidents in Boston from February 11th to March 11th, 2023. The dataset contained information on the date, time, location, and type of each fire incident.</p>
+				<p>The fire incident data used in this analysis was obtained from the <a href="https://data.boston.gov/dataset/fire-incident-reporting" target="_blank">Boston Fire Department</a>. The data includes information on the date, time, location, and cause of each fire incident that occurred during the selected time period.</p>
+				<h3>Number of fires in each neighbor in Boston</h3>
+				<p>The data collected between February 11 and March 11 reveals that the neighborhoods of Boston, Charlestown, and Roxbury were the areas most affected by fires. The incidence of fires in these areas was significantly higher than other neighborhoods in the Boston region.</p>
+				<p>information highlights the need for increased fire prevention measures in these neighborhoods, such as the installation of fire alarms and smoke detectors, regular fire safety inspections, and improved building codes. Local authorities should also consider targeted outreach and education campaigns to raise awareness of fire prevention practices among residents in these areas.</p>
+
+			<canvas id="myChart"></canvas>
+
+			<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+			<script>
+				var ctx = document.getElementById('myChart').getContext('2d');
+				var chart = new Chart(ctx, {
+					// The type of chart we want to create
+					type: 'bar',
+		
+					// The data for our dataset
+					data: {
+						labels: ['Allston-Brighton', 'Boston', 'Charlestown', 'Dorchester', 'East Boston', 'Harbor Islands','Hyde Park',
+'Jamaica Plain','Mattapan','Roslindale','Roxbury','South Boston','West Roxbury'],
+						datasets: [{
+							label: 'Number of fire incident',
+							backgroundColor: 'rgb(158, 8, 8)',
+							borderColor: 'rgb(255 ,255 ,255)',
+							data: [314,1082,94,591,172,1,123,211,123,103,659,250,118]
+						}]
+					},
+		
+					// Configuration options go here
+					options: {}
+				});
+		
+			</script>
+			<p>This information could be useful for fire prevention efforts, such as increasing inspections or staffing during weekdays. Distribution of Fire Incidents by Time of Day. Next, we looked at the distribution of fire incidents across different times of the day. As shown in the line chart below, the majority of incidents occurred between 12 PM and 10 PM, with the highest concentration between 2 PM and 6 PM.</p>
+			
+		
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v6.js"></script>
+
+<!-- Create a div where the graph will take place -->
+<div id="my_dataviz"></div>
+
+<style>
+	.bubbles {
+	  stroke-width: 2px;
+	  stroke: gainsboro;
+	}
+	.bubbles:hover {
+	  stroke: black;
+	}
+  </style>
+
+<script>
+
+	// set the dimensions and margins of the graph
+	const margin = {top: 30, right: 20, bottom: 30, left: 80},
+		width = 700 - margin.left - margin.right,
+		height = 520 - margin.top - margin.bottom;
+	
+	// append the svg object to the body of the page
+	const svg = d3.select("#my_dataviz")
+	  .append("svg")
+		.attr("width", width + margin.left + margin.right)
+		.attr("height", height + margin.top + margin.bottom)
+	  .append("g")
+		.attr("transform", `translate(${margin.left},${margin.top})`);
+	
+	//Read the data
+	d3.csv("./data/scatter-plot-data.csv").then( function(data) {
+	
+	  // Add X axis
+	  const x = d3.scaleLinear()
+		.domain([0, 16000])
+		.range([ 0, width ]);
+	  svg.append("g")
+		.attr("transform", `translate(0, ${height})`)
+		.call(d3.axisBottom(x));
+	
+	  // Add Y axis
+	  const y = d3.scaleLinear()
+		.domain([0, 12000000])
+		.range([ height, 0]);
+	  svg.append("g")
+		.call(d3.axisLeft(y));
+	
+	  // Add a scale for bubble size
+	  const z = d3.scaleLinear()
+		.domain([300, 130000])
+		.range([ 4, 40]);
+	
+	  // Add a scale for bubble color
+	  const myColor = d3.scaleOrdinal()
+		.domain(["Allston-Brighton", "Boston", "Charlestown", "Dorchester", "East Boston", "Harbor Islands","Hyde Park",
+"Jamaica Plain","Mattapan","Roslindale","Roxbury","South Boston","West Roxbury"])
+		.range(d3.schemeSet2);
+	
+	  // -1- Create a tooltip div that is hidden by default:
+	  const tooltip = d3.select("#my_dataviz")
+		.append("div")
+		  .style("opacity", 0)
+		  .attr("class", "tooltip")
+		  .style("background-color", "black")
+		  .style("border-radius", "5px")
+		  .style("padding", "10px")
+		  .style("color", "white")
+	
+	  // -2- Create 3 functions to show / update (when mouse move but stay on same circle) / hide the tooltip
+	  const showTooltip = function(event, d) {
+		tooltip
+		  .transition()
+		  .duration(200)
+		tooltip
+		  .style("opacity", 1)
+		  .html("neighborhood: " + d.neighborhood)
+		  .style("left", (event.x)/2 + "px")
+		  .style("top", (event.y)/2+30 + "px")
+	  }
+	  const moveTooltip = function(event, d) {
+		tooltip
+		  .style("left", (event.x)/2 + "px")
+		  .style("top", (event.y)/2+30 + "px")
+	  }
+	  const hideTooltip = function(event, d) {
+		tooltip
+		  .transition()
+		  .duration(200)
+		  .style("opacity", 0)
+	  }
+	
+	  // Add dots
+	  svg.append('g')
+		.selectAll("dot")
+		.data(data)
+		.join("circle")
+		  .attr("class", "bubbles")
+		  .attr("cx", d => x(d.CountOfAlarm))
+		  .attr("cy", d => y(d.PropertyLoss))
+		  .attr("r", d => z(d.Population))
+		  .style("fill", d => myColor(d.neighborhood))
+		// -3- Trigger the functions
+		.on("mouseover", showTooltip )
+		.on("mousemove", moveTooltip )
+		.on("mouseleave", hideTooltip )
+	
+	  })
+	</script>
+
+
+    <!-- Load d3.js -->
+<script src="https://d3js.org/d3.v6.js"></script>
+
+<!-- Create a div where the graph will take place -->
+<div id="linechart"></div>
+
+<script>
+
+	// set the dimensions and margins of the graph
+	const margin: {top: 10, right: 30, bottom: 30, left: 60},
+		width: 460 - margin.left - margin.right,
+		height: 400 - margin.top - margin.bottom;
+	
+	// append the svg object to the body of the page
+	const svg = d3.select("#linechart")
+	  .append("svg")
+		.attr("width", width + margin.left + margin.right)
+		.attr("height", height + margin.top + margin.bottom)
+	  .append("g")
+		.attr("transform",
+			  `translate(${margin.left}, ${margin.top})`);
+	
+	//Read the data
+	d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/3_TwoNumOrdered_comma.csv",
+	
+	  // When reading the csv, I must format variables:
+	  function(d){
+		return { date : d3.timeParse("%Y-%m-%d")(d.date), value : d.value }
+	  }).then(
+	
+	  // Now I can use this dataset:
+	  function(data) {
+	
+		// Add X axis --> it is a date format
+		const x = d3.scaleTime()
+		  .domain(d3.extent(data, function(d) { return d.date; }))
+		  .range([ 0, width ]);
+		xAxis = svg.append("g")
+		  .attr("transform", `translate(0, ${height})`)
+		  .call(d3.axisBottom(x));
+	
+		// Add Y axis
+		const y = d3.scaleLinear()
+		  .domain([0, d3.max(data, function(d) { return +d.value; })])
+		  .range([ height, 0 ]);
+		yAxis = svg.append("g")
+		  .call(d3.axisLeft(y));
+	
+		// Add a clipPath: everything out of this area won't be drawn.
+		const clip = svg.append("defs").append("svg:clipPath")
+			.attr("id", "clip")
+			.append("svg:rect")
+			.attr("width", width )
+			.attr("height", height )
+			.attr("x", 0)
+			.attr("y", 0);
+	
+		// Add brushing
+		const brush = d3.brushX()                   // Add the brush feature using the d3.brush function
+			.extent( [ [0,0], [width,height] ] )  // initialise the brush area: start at 0,0 and finishes at width,height: it means I select the whole graph area
+			.on("end", updateChart)               // Each time the brush selection changes, trigger the 'updateChart' function
+	
+		// Create the line variable: where both the line and the brush take place
+		const line = svg.append('g')
+		  .attr("clip-path", "url(#clip)")
+	
+		// Add the line
+		line.append("path")
+		  .datum(data)
+		  .attr("class", "line")  // I add the class line to be able to modify this line later on.
+		  .attr("fill", "none")
+		  .attr("stroke", "steelblue")
+		  .attr("stroke-width", 1.5)
+		  .attr("d", d3.line()
+			.x(function(d) { return x(d.date) })
+			.y(function(d) { return y(d.value) })
+			)
+	
+		// Add the brushing
+		line
+		  .append("g")
+			.attr("class", "brush")
+			.call(brush);
+	
+		// A function that set idleTimeOut to null
+		let idleTimeout
+		function idled() { idleTimeout = null; }
+	
+		// A function that update the chart for given boundaries
+		function updateChart(event,d) {
+	
+		  // What are the selected boundaries?
+		  extent = event.selection
+	
+		  // If no selection, back to initial coordinate. Otherwise, update X axis domain
+		  if(!extent){
+			if (!idleTimeout) return idleTimeout = setTimeout(idled, 350); // This allows to wait a little bit
+			x.domain([ 4,8])
+		  }else{
+			x.domain([ x.invert(extent[0]), x.invert(extent[1]) ])
+			line.select(".brush").call(brush.move, null) // This remove the grey brush area as soon as the selection has been done
+		  }
+	
+		  // Update axis and line position
+		  xAxis.transition().duration(1000).call(d3.axisBottom(x))
+		  line
+			  .select('.line')
+			  .transition()
+			  .duration(1000)
+			  .attr("d", d3.line()
+				.x(function(d) { return x(d.date) })
+				.y(function(d) { return y(d.value) })
+			  )
+		}
+	
+		// If user double click, reinitialize the chart
+		svg.on("dblclick",function(){
+		  x.domain(d3.extent(data, function(d) { return d.date; }))
+		  xAxis.transition().call(d3.axisBottom(x))
+		  line
+			.select('.line')
+			.transition()
+			.attr("d", d3.line()
+			  .x(function(d) { return x(d.date) })
+			  .y(function(d) { return y(d.value) })
+		  )
+		});
+	
+	})
+	</script>
+    
+</div>
+
+</body>
+</html>
+
+
