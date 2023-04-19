@@ -207,7 +207,7 @@ var config = {
     //projection: 'equirectangular',
     //Read more about available projections here
     //https://docs.mapbox.com/mapbox-gl-js/example/projections/
-    inset: true,
+    inset: false,
     theme: 'dark',
     use3dTerrain: false, //set true for enabling 3D maps.
     auto: false,
@@ -297,7 +297,7 @@ var config = {
             id: 'third-identifier',
             alignment: 'left',
             hidden: false,
-            description: 'Across the United States, there are <b>28%</b> fewer restorative justice laws for adult offenders than there are for minors.',
+            description: 'Across the United States, there are <b>27%</b> fewer restorative justice laws for adult offenders than there are for minors.',
             location: {
                 center: [-98.05708, 38.17605],
                 zoom: 4.23,
@@ -361,7 +361,7 @@ var config = {
             alignment: 'right',
             hidden: false,
             // image: './path/to/image/source.png',
-            description: 'Vermont has one of the most comprehensive restorative justice systems in the country. The state has passed 19 restorative justice laws and created a robust network of Community Justice Centers throughout the state.',
+            description: 'Vermont has one of the most comprehensive restorative justice systems in the country. The state has passed 18 restorative justice laws and created a robust network of Community Justice Centers throughout the state.',
             location: {
                 center: [-72.52382, 43.73300],
                 zoom: 8.36,
@@ -415,7 +415,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             // image: './path/to/image/source.png',
-            description: '“Colorado state law allows for police officers to make an ad hoc decision in the field essentially as [whether] to refer youth to restorative justice,” González said. “That&#39;s problematic because you can think about coercion, you can think about bias, right. All of the things that exist. And [restorative justice] becomes a co-optation within a state framework that really perpetuates structural discrimination, but with a nicer label to it.”',
+            description: '“Colorado state law allows for police officers to make an ad hoc decision in the field essentially as [whether] to refer youth to restorative justice,” González says. “That&#39;s problematic because you can think about coercion, you can think about bias, right. All of the things that exist. And [restorative justice] becomes a co-optation within a state framework that really perpetuates structural discrimination, but with a nicer label to it.”',
             location: {
                 center: [-105.54100, 38.64783],
                 zoom: 7.03,
@@ -764,6 +764,7 @@ window.addEventListener('resize', scroller.resize);
 
 
 // Toggle page header on map view
+function toggleHeader () {
 const target = document.querySelector('#map');
 const headerElement = document.querySelector('.header');
 if (!target) {
@@ -802,4 +803,6 @@ if (!target) {
     });
   });
   viewportObserver.observe(document.documentElement);
-}
+}};
+
+setTimeout (toggleHeader, 5000);
