@@ -211,7 +211,7 @@ gold#FBC24C
 
 @media only screen and (max-width:600px)
 {.header-container h2{
-  font-family:"Staff-Regular",Arial, Helvetica, sans-serif;
+  font-family:"Staff-Bold",Arial, Helvetica, sans-serif;
   font-size: 18px;
   line-height: 24px;
   margin: 20px 0;
@@ -222,7 +222,7 @@ gold#FBC24C
 
 @media only screen and (min-width:601px)
 {.header-container h2{
-  font-family:"Staff-Regular",Arial, Helvetica, sans-serif;
+  font-family:"Staff-Bold",Arial, Helvetica, sans-serif;
   font-size: 26px;
   line-height: 36px;
   margin: 0 20%;
